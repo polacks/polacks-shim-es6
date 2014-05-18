@@ -12,10 +12,10 @@ var assert = require("chai").assert,
 
 describe("polacks-shim-es6", function() {
     it("exports modules correctly", function() {
-        assert.ok(shim.ArrayIterator);
-        assert.ok(shim.IteratorResult);
-        assert.ok(shim.Map);
-        assert.ok(shim.Set);
-        assert.ok(shim.Symbol);
+        assert.isFunction(shim.ArrayIterator);
+        assert.isFunction(shim.IteratorResult);
+        assert.isFunction(shim.Map);
+        assert.isFunction(shim.Set);
+        assert.isFunction(shim.Symbol);
     });
 });
