@@ -11,8 +11,7 @@ var cached = require("gulp-cached"),
     fs = require("fs"),
     gulp = require("gulp"),
     istanbul = require("gulp-istanbul"),
-    mocha = require("gulp-mocha"),
-    plumber = require("gulp-plumber");
+    mocha = require("gulp-mocha");
 
 /*eslint no-sync: 0 */
 
@@ -79,7 +78,6 @@ gulp.task("lint", ["beautify"], function() {
 
 gulp.task("test", ["lint"], function() {
     gulp.src(global.paths.tests.files)
-        .pipe(plumber())
         .pipe(mocha({
         "reporter": "tap"
     }));
