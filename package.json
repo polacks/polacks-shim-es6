@@ -1,7 +1,7 @@
 {
     "author": "Mateusz Charytoniuk <mateusz.charyotniuk@gmail.com>",
     "name": "polacks-shim-es6",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Basic es6 objects.",
     "main": "polacks-shim-es6",
     "keywords": ["es6", "shim"],
@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "cruks-lib-config": "2.x",
-        "es6-symbol": "0.x"
+        "symbol": "0.x"
     },
     "devDependencies": {
         "chai": "1.9.x",

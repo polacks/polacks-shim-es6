@@ -80,7 +80,9 @@ gulp.task("lint", ["beautify"], function() {
 gulp.task("test", ["lint"], function() {
     gulp.src(global.paths.tests.files)
         .pipe(plumber())
-        .pipe(mocha());
+        .pipe(mocha({
+        "reporter": "tap"
+    }));
 });
 
 gulp.task("watch", function() {

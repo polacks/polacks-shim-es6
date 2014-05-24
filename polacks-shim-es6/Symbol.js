@@ -5,4 +5,11 @@
 
 "use strict";
 
-module.exports = global.Symbol || require("es6-symbol");
+module.exports = global.Symbol || require("symbol");
+module.exports.isSymbol = function(sym) {
+    if (global.Symbol) {
+        return "symbol" === typeof sym;
+    }
+
+    return sym instanceof module.exports;
+};
