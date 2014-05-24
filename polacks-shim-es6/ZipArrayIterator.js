@@ -5,8 +5,7 @@
 
 "use strict";
 
-var expect = require("cruks-lib-config").expect,
-    path = require("path"),
+var path = require("path"),
     IteratorResult = require(path.join(__dirname, "/IteratorResult")),
     MySymbol = require(path.join(__dirname, "/Symbol")),
     firstIteratedObjectSymbol = MySymbol("[[FirstIteratedObject]]"),
@@ -19,8 +18,8 @@ var expect = require("cruks-lib-config").expect,
  * @param {Array} second array object to be iterated over
  */
 function ZipArrayIterator(first, second) {
-    this[firstIteratedObjectSymbol] = expect.array().assert(first);
-    this[secondIteratedObjectSymbol] = expect.array().assert(second);
+    this[firstIteratedObjectSymbol] = first;
+    this[secondIteratedObjectSymbol] = second;
     this[nextIndexSymbol] = 0;
 }
 

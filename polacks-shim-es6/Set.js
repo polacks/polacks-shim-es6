@@ -6,8 +6,7 @@
 
 "use strict";
 
-var expect = require("cruks-lib-config").expect,
-    path = require("path"),
+var path = require("path"),
     ArrayIterator = require(path.join(__dirname, "/ArrayIterator")),
     MySymbol = require(path.join(__dirname, "/Symbol")),
     valuesSymbol = MySymbol("values"),
@@ -28,7 +27,7 @@ function MySet(arr) {
         return;
     }
 
-    expect.array().assert(arr).forEach(function(item) {
+    arr.forEach(function(item) {
         this.add(item);
     }, this);
 }
@@ -100,8 +99,6 @@ MySet.prototype.entries = function() {
  * @returns {void}
  */
 MySet.prototype.forEach = function(cb, thisArg) {
-    cb = expect.function().assert(cb);
-
     this[valuesSymbol].forEach(function(item) {
         cb.call(thisArg, item, item, this);
     }, this);

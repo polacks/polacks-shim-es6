@@ -5,8 +5,7 @@
 
 "use strict";
 
-var expect = require("cruks-lib-config").expect,
-    path = require("path"),
+var path = require("path"),
     IteratorResult = require(path.join(__dirname, "/IteratorResult")),
     MySymbol = require(path.join(__dirname, "/Symbol")),
     iteratedObjectSymbol = MySymbol("[[IteratedObject]]"),
@@ -17,7 +16,7 @@ var expect = require("cruks-lib-config").expect,
  * @param {Array} arr array object to be iterated over
  */
 function ArrayIterator(arr) {
-    this[iteratedObjectSymbol] = expect.array().assert(arr);
+    this[iteratedObjectSymbol] = arr;
     this[nextIndexSymbol] = 0;
 }
 

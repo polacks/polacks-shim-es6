@@ -7,18 +7,11 @@
 "use strict";
 
 var path = require("path"),
-    expect = require("cruks-lib-config").expect,
-    expectInputArray, // private, Object
     ArrayIterator = require(path.join(__dirname, "/ArrayIterator")),
     MySymbol = require(path.join(__dirname, "/Symbol")),
     keysSymbol = MySymbol("keys"),
     valuesSymbol = MySymbol("values"),
     ZipArrayIterator = require(path.join(__dirname, "/ZipArrayIterator"));
-
-/**
- * @Type {Object}
- */
-expectInputArray = expect.array().every(expect.array().length(2));
 
 /**
  * @constructor
@@ -36,7 +29,7 @@ function MyMap(arr) {
         return;
     }
 
-    expectInputArray.assert(arr).forEach(function(item) {
+    arr.forEach(function(item) {
         this.set(item[0], item[1]);
     }, this);
 }
@@ -97,8 +90,6 @@ MyMap.prototype.entries = function() {
  * @returns {void}
  */
 MyMap.prototype.forEach = function(cb, thisArg) {
-    cb = expect.function().assert(cb);
-
     this[valuesSymbol].forEach(function(item, index) {
         cb.call(thisArg, item, this[keysSymbol][index], this);
     }, this);
