@@ -1,6 +1,6 @@
 /**
  * @license Copyright (c) 2013 Cheng Lou (github.com/chenglou)
- * @license Copyright (c) 2014 Polacks
+ * @license Copyright (c) 2014 smrtlabs
  * For licensing, see LICENSE
  */
 
@@ -9,10 +9,10 @@
 /* global describe: false, it: false */
 
 var assert = require("chai").assert,
-    MyMap = require(global.paths.root + "/polacks-shim-es6/Map");
+    MyMap = require(global.paths.root + "/smrt-shim-es6/Map");
 // sinon = require("sinon");
 
-describe("polacks-shim-es6/Map", function() {
+describe("smrt-shim-es6/Map", function() {
     var fixtureObjectA,
         fixtureObjectB;
 
@@ -219,7 +219,7 @@ describe("polacks-shim-es6/Map", function() {
 
         arr = [
             1, 2, {
-                "a": "hello"
+            "a": "hello"
             },
             [3, 4, 5]
         ];

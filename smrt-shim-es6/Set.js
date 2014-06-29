@@ -1,6 +1,6 @@
 /**
  * @license Copyright (c) 2013 Cheng Lou (github.com/chenglou)
- * @license Copyright (c) 2014 Polacks
+ * @license Copyright (c) 2014 smrtlabs
  * For licensing, see LICENSE
  */
 

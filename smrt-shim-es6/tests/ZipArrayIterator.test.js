@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2014 Polacks
+ * @license Copyright (c) 2014 smrtlabs
  * For licensing, see LICENSE
  */
 
@@ -8,9 +8,9 @@
 /* global describe: false, it: false */
 
 var assert = require("chai").assert,
-    ZipArrayIterator = require(global.paths.root + "/polacks-shim-es6/ZipArrayIterator");
+    ZipArrayIterator = require(global.paths.root + "/smrt-shim-es6/ZipArrayIterator");
 
-describe("polacks-shim-es6/ZipArrayIterator", function() {
+describe("smrt-shim-es6/ZipArrayIterator", function() {
     var arr = new ZipArrayIterator([1, 2, 3], ["a", "b", "c"]),
         entry;
 

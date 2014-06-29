@@ -42,10 +42,10 @@ global.paths = {
     },
     "gulpfile": __filename,
     "libs": {
-        "files": "polacks-*/**/*.js"
+        "files": "smrt-*/**/*.js"
     },
     "tests": {
-        "files": "polacks-*/**/*.test.js"
+        "files": "smrt-*/**/*.test.js"
     },
     "root": __dirname
 };
@@ -79,8 +79,8 @@ gulp.task("lint", ["beautify"], function() {
 gulp.task("test", ["lint"], function() {
     gulp.src(global.paths.tests.files)
         .pipe(mocha({
-        "reporter": "tap"
-    }));
+            "reporter": "tap"
+        }));
 });
 
 gulp.task("watch", function() {

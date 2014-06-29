@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2014 Polacks
+ * @license Copyright (c) 2014 smrtlabs
  * For licensing, see LICENSE
  */
 
@@ -8,9 +8,9 @@
 /* global describe: false, it: false */
 
 var assert = require("chai").assert,
-    shim = require(global.paths.root + "/polacks-shim-es6");
+    shim = require(global.paths.root + "/smrt-shim-es6");
 
-describe("polacks-shim-es6", function() {
+describe("smrt-shim-es6", function() {
     it("exports modules correctly", function() {
         assert.isFunction(shim.ArrayIterator);
         assert.isFunction(shim.IteratorResult);

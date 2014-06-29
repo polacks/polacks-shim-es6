@@ -1,6 +1,6 @@
 /**
  * @license Copyright (c) 2013 Cheng Lou (github.com/chenglou)
- * @license Copyright (c) 2014 Polacks
+ * @license Copyright (c) 2014 smrtlabs
  * For licensing, see LICENSE
  */
 
@@ -9,9 +9,9 @@
 /* global describe: false, it: false */
 
 var assert = require("chai").assert,
-    MySymbol = require(global.paths.root + "/polacks-shim-es6/Symbol");
+    MySymbol = require(global.paths.root + "/smrt-shim-es6/Symbol");
 
-describe("polacks-shim-es6/Symbol", function() {
+describe("smrt-shim-es6/Symbol", function() {
     it("creates symbol shim", function() {
         var o = {},
             symbol = MySymbol();

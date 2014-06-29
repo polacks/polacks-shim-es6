@@ -1,6 +1,6 @@
 NODE_VERSIONS="\
     v0.11.13 \
-    v0.10.28 \
+    v0.10.29 \
 "
-OUTPUT_PREFIX="polacks-shim-es6/"
+OUTPUT_PREFIX="smrt-shim-es6/"
 TEST_CMD="cd /dnt/ && npm install && npm test"
